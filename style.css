@@ -1,39 +1,38 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, section, footer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
 }
 
 section {
-    text-align: justify;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-a {
-    color: #3498db;
-    transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-    color: #007bff;
+.course {
+    width: 45%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    nav ul {
-        text-align: center;
-    }
-
-    nav li {
-        display: block;
-        margin: 10px 0;
-    }
-}
-
-
