@@ -3,49 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Ali Belaliyah - Professional Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="bg-dark text-light py-3">
         <div class="container">
             <h1>Ali Belaliyah</h1>
             <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#cv">CV</a></li>
-                    <li><a href="#courses">Courses</a></li>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#about">About</a></li>
+                    <li class="list-inline-item"><a href="#cv">CV</a></li>
+                    <li class="list-inline-item"><a href="#courses">Courses</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="about" class="container">
+    <section id="about" class="container my-5">
         <h2>About Me</h2>
         <p>I am Ali Belaliyah, a 20-year-old university student and Python programmer with experience in ethical hacking.</p>
     </section>
 
-    <section id="cv" class="container">
+    <section id="cv" class="container my-5">
         <h2>Curriculum Vitae</h2>
         <!-- Add your CV content here -->
     </section>
 
-    <section id="courses" class="container">
+    <section id="courses" class="container my-5">
         <h2>Courses</h2>
-        <ul>
-            <li><a href="link_to_python_course">Python Programming</a></li>
-            <li><a href="link_to_ethical_hacking_course">Ethical Hacking</a></li>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="link_to_python_course">Python Programming</a></li>
+            <li class="list-group-item"><a href="link_to_ethical_hacking_course">Ethical Hacking</a></li>
             <!-- Add more courses as needed -->
         </ul>
     </section>
 
     <!-- Add more sections/pages as needed -->
 
-    <footer>
-        <div class="container">
+    <footer class="bg-dark text-light py-3">
+        <div class="container text-center">
             <p>&copy; 2023 Ali Belaliyah</p>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
 
