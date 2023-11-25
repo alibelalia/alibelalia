@@ -3,22 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Your Website</title>
 </head>
 <body>
-    <div class="content">
-        <h1>Welcome to My Website</h1>
-        <p>Do you know me?</p>
-        <input type="text" id="nameInput" placeholder="Enter your name">
-        <button onclick="checkName()">Submit</button>
+
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to My Website</h1>
+        <p class="lead">Do you know me?</p>
+        <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+        <button class="btn btn-primary mt-3" onclick="checkName()">Submit</button>
     </div>
 
-    <div class="popup" id="popup">
-        <span id="popup-text"></span>
-        <button onclick="closePopup()">Close</button>
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Popup Message</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p id="popup-text"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closePopup()">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
