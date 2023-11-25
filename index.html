@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Personalized Greeting</title>
+    <title>Your Website</title>
 </head>
 <body>
+    <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>Do you know me?</p>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="checkName()">Submit</button>
+    </div>
 
     <div class="popup" id="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <h2>Welcome!</h2>
-            <p id="greeting-text"></p>
-        </div>
+        <span id="popup-text"></span>
+        <button onclick="closePopup()">Close</button>
     </div>
 
     <script src="script.js"></script>
