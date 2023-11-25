@@ -3,29 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Learn Ethical Hacking and Programming</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Personalized Greeting</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Learning Platform</h1>
-        <p>Explore courses in Ethical Hacking and Programming.</p>
-    </header>
-    <section id="courses">
-        <article class="course">
-            <h2>Ethical Hacking 101</h2>
-            <p>Learn the basics of ethical hacking and cybersecurity.</p>
-            <a href="hacking101.html">Learn More</a>
-        </article>
-        <article class="course">
-            <h2>Programming Fundamentals</h2>
-            <p>Build a strong foundation in programming with this course.</p>
-            <a href="programming.html">Learn More</a>
-        </article>
-        <!-- Add more courses as needed -->
-    </section>
-    <footer>
-        <p>&copy; 2023 Your Learning Platform</p>
-    </footer>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Welcome!</h2>
+            <p id="greeting-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
