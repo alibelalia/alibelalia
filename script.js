@@ -1,19 +1,21 @@
 function checkName() {
     var name = document.getElementById("nameInput").value;
-    var popup = document.getElementById("popup");
+    var popup = document.getElementById("myModal");
     var popupText = document.getElementById("popup-text");
 
-    if (name.toLowerCase() === "ali") {
-        popupText.textContent = "Ali Belalia is the owner of this website.";
-    } else if (name.toLowerCase() === "ahlam") {
-        popupText.textContent = "Ali Belalia loves you, Ahlam!";
+    if (name.trim() !== "") {
+        popupText.innerHTML = "Thank you for visiting our website, " + name + "!";
     } else {
-        popupText.textContent = "Sorry, I don't know you.";
+        popupText.innerHTML = "Please enter a name.";
     }
 
-    popup.style.display = "block";
+    if (name.toLowerCase() === "ahlam") {
+        popupText.innerHTML = "Hi Ahlam! Ali Belalia loves you.<br>Here's a special message: 'You make every moment special!'";
+    }
+
+    $('#myModal').modal('show');
 }
 
 function closePopup() {
-    document.getElementById("popup").style.display = "none";
+    $('#myModal').modal('hide');
 }
