@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lydia's Special Surprise</title>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<title>Lydia's Heartfelt Surprise</title>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 <style>
   body, html {
     height: 100%;
     margin: 0;
-    font-family: 'Dancing Script', cursive;
-    background: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
+    font-family: 'Parisienne', cursive;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow: hidden;
   }
   .container {
     max-width: 600px;
@@ -22,6 +23,47 @@
   }
   h1 {
     font-size: 3em;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  .heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin: auto;
+    transform: rotate(-45deg);
+    transform-origin: bottom right;
+  }
+  .heart:before,
+  .heart:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100px;
+    height: 150px;
+    background: #fff;
+    border-radius: 100px 100px 0 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transform-origin: bottom center;
+  }
+  .heart:after {
+    left: 0;
+    transform: translate(50%, -50%) rotate(-45deg);
+  }
+  button {
+    background-color: #fff;
+    color: #f6d365;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin-top: 30px;
+  }
+  button:hover {
+    background-color: transparent;
     color: #fff;
   }
   #secretMessage {
@@ -32,27 +74,14 @@
     opacity: 0;
     transition: opacity 3s ease;
   }
-  button {
-    background-color: #fff;
-    color: #ff9a9e;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    padding: 15px 30px;
-    font-size: 1.5em;
-    cursor: pointer;
-    transition: all 0.5s ease;
-  }
-  button:hover {
-    background-color: transparent;
-    color: #fff;
-  }
 </style>
 </head>
 <body>
 <div class="container">
-  <h1>For Lydia</h1>
-  <button onclick="revealMessage()">Reveal Your Surprise</button>
-  <div id="secretMessage">Every moment with you is magical, Lydia. I love you! 💖</div>
+  <h1>Lydia</h1>
+  <div class="heart"></div>
+  <button onclick="revealMessage()">Click for a Surprise</button>
+  <div id="secretMessage">Lydia, every beat of my heart is for you. I love you more than words can express! 💖</div>
 </div>
 
 <script>
