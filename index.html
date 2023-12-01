@@ -7,40 +7,50 @@
 <style>
   body {
     font-family: 'Arial', sans-serif;
-    background-color: #f3f3f3;
+    background-color: #ffe0f0;
     text-align: center;
-    margin-top: 100px;
+    padding-top: 50px;
   }
-  #message {
-    font-size: 2em;
-    color: #ff1493;
-    margin-bottom: 20px;
+  h1 {
+    color: #800040;
   }
-  #heart {
-    font-size: 3em;
-    color: #ff1493;
-    animation: beat 0.5s infinite;
+  #secretMessage {
+    display: none;
+    font-size: 24px;
+    color: #800040;
+    margin-top: 20px;
+    transition: all 2s ease;
   }
-  @keyframes beat {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+  button {
+    background-color: #ff80bf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+  }
+  button:hover {
+    background-color: #ff4d88;
   }
 </style>
+</head>
+<body>
+<h1>Hello Lydia!</h1>
+<button onclick="showMessage()">Discover your secret message</button>
+<div id="secretMessage">Lydia, you mean the world to me! 💖</div>
+
 <script>
-  function displayMessage() {
-    var visitorName = prompt("Please enter your name", "");
-    if (visitorName && visitorName.toLowerCase() === "lydia") {
-      document.getElementById("message").innerText = "I love you, Lydia!";
-      document.getElementById("heart").innerText = "💖";
+  function showMessage() {
+    var message = document.getElementById('secretMessage');
+    if (message.style.display === 'none') {
+      message.style.display = 'block';
+      message.style.transform = 'scale(1.1)';
     } else {
-      document.getElementById("message").innerText = "Welcome, " + (visitorName || "Guest") + "!";
+      message.style.display = 'none';
     }
   }
 </script>
-</head>
-<body onload="displayMessage()">
-<h1 id="message"></h1>
-<div id="heart"></div>
 </body>
 </html>
