@@ -33,6 +33,7 @@
       margin: auto;
       transform: rotate(-45deg);
       transform-origin: bottom right;
+      animation: heartbeat 2s infinite alternate;
     }
     .heart:before,
     .heart:after {
@@ -72,9 +73,26 @@
       color: #fff;
       margin-top: 20px;
       opacity: 0;
-      transition: opacity 3s ease;
+      transition: opacity 1s ease;
+    }
+    @keyframes heartbeat {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
     }
   </style>
+  <script>
+    function revealMessage() {
+      const secretMessage = document.getElementById('secretMessage');
+      secretMessage.style.display = 'block';
+      setTimeout(() => {
+        secretMessage.style.opacity = 1;
+      }, 100);
+    }
+  </script>
 </head>
 <body>
   <div class="container">
